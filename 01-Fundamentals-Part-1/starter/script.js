@@ -28,7 +28,7 @@ console.log(averageCountry > population)
 
 let description = "Portugal is in Europe and its 11 million people speak portuguese"
 
-//Coding Chnallenge one
+//Coding Challenge one
 
 let markWeight = 78;
 let johnWeight = 92;
@@ -49,7 +49,7 @@ let countryPopulation = "11 million people";
 let countryLanguage = "portuguese";
 console.log(`${countryName} is in ${countryRegion} and its ${countryPopulation} speak ${countryLanguage}`)
 
-//Coding Chnallenge two
+//Coding Challenge two
 
 if (markResult > johnResult) {
   console.log(`Mark's BMI ${markResult} is higher than John's ${johnResult}`)
@@ -73,4 +73,73 @@ console.log(test())
 console.log(test())
 console.log(newTest())
 console.log(newTest())
+
+//Coding Challenge three
+
+let Dolphins = (96 + 81 + 110) /3;
+let Koalas = (88 + 91 + 110) / 3;
+
+if (Dolphins > Koalas) {
+  console.log("Youhoo")
+} else if (Koalas > Dolphins) {
+  console.log("Whooho")
+} else if (Koalas === Dolphins) {
+  console.log("PEW PEW PEW")
+}
+
+let DolphinsNew = (97 + 112 + 80) / 3;
+let KoalasNew = (109 + 95 + 123) / 3;
+
+if (DolphinsNew > KoalasNew && DolphinsNew >= 100) {
+  console.log("1")
+} else if (KoalasNew > DolphinsNew && KoalasNew >= 100) {
+  console.log("2")
+} else if (KoalasNew === DolphinsNew && KoalasNew >= 100 && DolphinsNew >= 100) {
+  console.log("3")
+} else {
+  console.log("no")
+}
+
+// Switch case
+
+const foreighnLanguage = "muchacho";   // what we check
+
+switch (foreighnLanguage) {
+  case "chinese":                              // it is same as if statement
+    console.log("MOST number of native speakers!");   //what we do after check
+  break;
+  case "spanish": 
+    console.log("2nd place in number of native speakers");
+  break;
+  case "english":
+    console.log("3rd place")
+  case "hindi":                       // checking one of this two
+  case "muchacho":
+    console.log("Number 4'")
+  break;
+  case "arabic":
+    console.log("5th most spoken language")
+  break;
+  default:
+    console.log("Great language too :D'")
+}
+
+
+// Ternary Operator
+
+const age = 15;
+
+age >= 18 ? console.log("come in") : console.log ("go home")
+const drink = age >= 18 ? console.log("come in") : console.log ("go home")
+
+//Coding Challenge four
+
+let bill = 275;
+let tip = bill * 0.15
+let moreTip = bill * 0.20
+
+const tips = bill >=50 && bill <= 300 ? tip : moreTip;
+
+console.log(`The bill was ${bill}, the tip was ${tip}, and the total value
+  ${bill + tip}`)
 
