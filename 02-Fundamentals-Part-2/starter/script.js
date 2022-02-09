@@ -155,3 +155,7 @@ const newTotalArray = () => {
 
 const moreNewArray = newTotalArray()
 console.log(moreNewArray)
+
+var numbers = [1, 4, 9];
+var roots = numbers.map(elem => elem * 2);
+console.log(roots)
