@@ -156,6 +156,86 @@ const newTotalArray = () => {
 const moreNewArray = newTotalArray()
 console.log(moreNewArray)
 
-var numbers = [1, 4, 9];
-var roots = numbers.map(elem => elem * 2);
+// NEW ARRAY
+
+const numbers = [1, 4, 9];
+const newestArary = (array) => {
+  let newArray = [];
+  array.forEach((item) => {
+    newArray.push(item);
+  })
+  return newArray;
+}
+
+const getNewestArray = newestArary(numbers)
+console.log(getNewestArray)
+
+const roots = numbers.map(elem => elem * 2);
+const newRoots = [...numbers];
 console.log(roots)
+console.log(newRoots)
+
+// INTRODUCTION TO OBJECTS
+
+const jonas = {
+  firstName: 'Jonas',
+  lastName: 'Schmedtmann',
+  age: 2037 - 1991,
+  job: 'teacher',
+  friends: ['Michael', 'Peter', 'Steven']
+};
+
+console.log(jonas.lastName)
+console.log(jonas['firstName'])
+
+const nameKey = "Name";
+
+console.log(jonas["last" + nameKey]);   // in the square brackets we cam put anyexpression
+
+const interestedIn = prompt("what do you want to know about age, friends, job");
+
+if (jonas[interestedIn]) {
+  console.log(jonas[interestedIn]);
+} else {
+  console.log("wrong request")
+}
+
+jonas.location = 'Portugal';
+jonas['twitter'] = '@jonasschmedtman';
+console.log(jonas);
+
+console.log(`${jonas.firstName} has ${jonas.friends.length} friends and ${jonas.firstName} best friend is ${jonas.friends[0]}`)
+
+// OBJECTS METHODS
+
+const createObject = (object) => {
+  let newObject = {};
+  for (let i in object) {
+    newObject[i] = object[i]
+ }
+ return newObject;
+}
+
+const moreNewObject = createObject(jonas)
+console.log(moreNewObject)
+
+const newJonas = {
+  firstName: 'Jonas',
+  lastName: 'Schmedtmann',
+  birthYear: 1991,
+  job: 'teacher',
+  friends: ['Michael', 'Peter', 'Steven'],
+  //calcAge: function (birthYear) {                  // function inside of object called method
+    //return 2037 - birthYear;
+  //}
+  calcAge: function(){
+    // console.log(this);
+    return 2037 - this.birthYear;
+  }
+};
+
+//console.log(newJonas.calcAge(1991));
+//console.log(newJonas["calcAge"](1991));
+console.log(newJonas.calcAge());
+console.log(newJonas.calcAge());
+console.log(newJonas.calcAge());
