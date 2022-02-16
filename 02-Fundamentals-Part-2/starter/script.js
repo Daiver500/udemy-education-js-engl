@@ -225,17 +225,58 @@ const newJonas = {
   birthYear: 1991,
   job: 'teacher',
   friends: ['Michael', 'Peter', 'Steven'],
+  hasDriversLicense: false,
   //calcAge: function (birthYear) {                  // function inside of object called method
     //return 2037 - birthYear;
   //}
   calcAge: function(){
     // console.log(this);
     return 2037 - this.birthYear;
+  },
+  calcAge: function(){
+    this.age = 2037 - this.birthYear;
+    return this.age;
+  },
+  getSummary: function () {
+    return `${this.firstName} is a ${this.calcAge()}-year old ${jonas.job}, and he has ${this.hasDriversLicense ? 'a' : 'no'} driver's license.`
   }
 };
 
 //console.log(newJonas.calcAge(1991));
 //console.log(newJonas["calcAge"](1991));
 console.log(newJonas.calcAge());
-console.log(newJonas.calcAge());
-console.log(newJonas.calcAge());
+console.log(newJonas.getSummary());
+
+// coding challenge seven
+
+const Mark = {
+  name: "Mark",
+  surname: "Miller",
+  mass: 78,
+  height: 1.69,
+  calcBMI: function(){
+    BMI = this.mass / this.height ** 2;
+    return BMI;
+  }
+}
+
+const John = {
+  name: "John",
+  surname: "Smith",
+  mass: 92,
+  height: 1.95,
+  calcBMI: function(){
+    BMI = this.mass / this.height ** 2;
+    return BMI;
+  }
+}
+
+console.log(`${Mark.name} ${Mark.surname} BMI is ${Mark.calcBMI()} and ${John.name}${John.surname} BMI is ${John.calcBMI()}. ${Mark.calcBMI() > John.calcBMI() ? "John stronger" : "Mark stronger"} `)
+
+// ITERATIONS
+
+let dot = 0;
+for (let i=0; i < 5; i++ ) {
+  dot++;
+}
+console.log(dot);
