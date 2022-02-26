@@ -280,3 +280,89 @@ for (let i=0; i < 5; i++ ) {
   dot++;
 }
 console.log(dot);
+
+const piotr = [
+ 'Jonas',
+ 'Schmedtmann',
+  2037 - 1991,
+  'teacher',
+  ['Michael', 'Peter', 'Steven'],
+  true
+];
+
+for (let i = piotr.length-1; i >= 0; i--) {
+  console.log(i, piotr[i])
+}
+
+const yearsNew = [1991, 2007, 1969, 2020];
+const agesNew = [];
+
+for (let i = 0; i < yearsNew.length; i++) {
+  agesNew.push(2037 - yearsNew[i]);
+}
+console.log(agesNew);
+
+for (let exercise = 1; exercise < 4; exercise++) {            // loop inside of loop
+  console.log(`-------- Starting exercise ${exercise}`);
+
+  for (let rep = 1; rep < 6; rep++) {
+    console.log(`Exercise ${exercise}: Lifting weight repetition ${rep}`);
+  }
+}
+
+// continue and break
+console.log('--- ONLY STRINGS ---')
+for (let i = 0; i < jonas.length; i++) {
+  if (typeof jonas[i] !== 'string') continue;
+
+  console.log(jonas[i], typeof jonas[i]);
+}
+
+console.log('--- BREAK WITH NUMBER ---')
+for (let i = 0; i < jonas.length; i++) {
+  if (typeof jonas[i] === 'number') break;
+
+  console.log(jonas[i], typeof jonas[i]);
+}
+
+// The while Loop
+for (let rep = 1; rep <= 10; rep++) {
+  console.log(`Lifting weights repetition ${rep} `);
+}
+
+let rep = 1;
+while (rep <= 10) {
+  console.log(`WHILE: Lifting weights repetition ${rep}`);
+  rep++;
+}
+
+// coding challenge eight
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips = [];
+const totals = [];
+
+const calcTipNew = (bill) => {
+  let tip = bill * 0.15
+  let moreTip = bill * 0.20
+  const tips = bill >=50 && bill <= 300 ? tip : moreTip;
+  return tips
+}
+
+for (let i = 0; i < bills.length; i++) {
+   const tip = calcTipNew(bills[i]);
+   tips.push(tip);
+   totals.push(tip + bills[i])
+}
+
+console.log(tips, totals)
+
+const calcAverageNew =(array) => {
+  let sum = 0;
+  for (let i = 0; i < array.length; i++) {
+    sum = sum + array[i];
+  }
+  return sum / array.length
+}
+
+console.log(calcAverageNew(bills));
